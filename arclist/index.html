@@ -5,9 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>D3 SVG Arcs</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <p>Vis below:</p>
+    <div id="legend">
+      <div class="title">Top 50: Iowa Liquor Sales</div>
+      <ul id="views">
+        <li>
+          <a href="#" class="graph active"
+            ><span class="fa fa-list"></span> Graph View</a
+          >
+        </li>
+        <!-- <li>
+          <a href="#" class="list"
+            ><span class="fa fa-list"></span> List View</a
+          >
+        </li> -->
+      </ul>
+    </div>
 
     <div id="vis" class="svg-container">
       <div id="overlay" class="cf">

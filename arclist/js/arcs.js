@@ -1,5 +1,5 @@
 // det data
-getJson(createVis, "data/iowa_liquor_sales_total.json");
+getJson(createVis, "data/top50.json");
 
 function createVis(json) {
   const el = d3.select("#vis").on("mousemove", positionOverlay);
@@ -8,7 +8,7 @@ function createVis(json) {
   const svgWidth = visEl.clientWidth;
 
   const yScale = d3.scaleLinear();
-  const margin = 20,
+  const margin = 50,
     x0 = margin,
     y0 = svgHeight,
     x1 = svgWidth - margin * 2,
@@ -23,8 +23,6 @@ function createVis(json) {
     overlayYOffset = 20;
 
   const data = transformData(JSON.parse(json));
-
-  console.log(svgHeight);
 
   var svg = d3
     .select("div#vis")
@@ -54,18 +52,6 @@ function createVis(json) {
   console.log(`maxSale: ${maxSale}`);
   console.log(`svgHeight: ${svgHeight}`);
 
-  yScale.domain([minSale, maxSale]).range([margin, svgHeight]);
-
-  //   const data = [
-  //     { cpx: xCenter, cpy: 0 },
-  //     { cpx: xCenter, cpy: 150 },
-
-  //     { cpx: xCenter, cpy: topY },
-  //   ];
-
-  // flat line values
-  // { cpx: xCenter, cpy: 400 },
-
   // init lines straight on bottom
   const overlay = el.select("#overlay");
   const visPaths = svg
@@ -88,9 +74,11 @@ function createVis(json) {
     .classed("hidden", true)
     .attr("d", createLine);
 
+  yScale.domain([maxSale, minSale]).range([topY, svgHeight]);
+
   // transition paths up from bottom
-  visPaths.data(data).transition().duration(defaultTime).attr("d", draw);
-  mousePaths.data(data).transition().duration(defaultTime).attr("d", draw);
+  visPaths.data(data).transition().duration(defaultTime).attr("d", pathIn);
+  mousePaths.data(data).transition().duration(defaultTime).attr("d", pathIn);
 
   function update() {
     // do stuff
@@ -121,14 +109,15 @@ function createVis(json) {
         .select(".title")
         .html(pathData.item_description);
 
-      overlay.select(".number").html(pathData.sales_total);
+      const salesString = numToCurrency.format(pathData.sales_total);
+
+      overlay.select(".number").html(salesString);
     });
   }
 
   function pathMouseOut(d, index) {
-    visPaths.each(function (d, i) {
-      d3.select(this).classed("active", false);
-    });
+    console.log("mouse out");
+    visPaths.classed("hover", false);
     overlay.classed("active", false);
   }
 
@@ -137,7 +126,7 @@ function createVis(json) {
     const y1 = 400;
     const points = [
       [x0, y0],
-      [xCenter, 400],
+      [xCenter, svgWidth],
       [x1, svgHeight],
     ];
     const path = d3.path();
@@ -146,7 +135,7 @@ function createVis(json) {
     return path;
   }
 
-  function draw(d) {
+  function pathIn(d) {
     const points = [
       [x0, y0],
       [xCenter, yScale(d.sales_total)],
@@ -214,6 +203,12 @@ function transformData(data) {
   });
   return newData;
 }
+
+const numToCurrency = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 2,
+});
 
 function getJson(callback, dataUrl) {
   var xobj = new XMLHttpRequest();

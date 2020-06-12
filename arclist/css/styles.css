@@ -1,6 +1,53 @@
 body {
+  margin: 0;
   background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+#legend {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 300px;
+  border-radius: 0 3px 3px 0;
+  background-color: #000;
+  color: #fff;
+}
+
+#legend .title {
+  padding: 10px 20px;
+  font-size: 18px;
+  border-bottom: solid 1px #fff;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#legend ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 20px;
+}
+
+#legend ul li {
+  margin: 5px 0 5px 0;
+  padding-bottom: 3px;
+  border-bottom: solid 1px rgba(255, 247, 0, 0.3);
+}
+
+#legend a {
+  color: #fff700;
+  text-decoration: none;
+  opacity: 0.5;
+  -webkit-transition: ease-out opacity 0.5s;
+  transition: ease-out opacity 0.5s;
+}
+
+#legend a:hover, #legend a.active {
+  opacity: 1;
+}
+
 #vis {
   position: fixed;
   width: 100%;
@@ -28,7 +75,8 @@ body {
   font-size: 18px;
   /* overflow: hidden; */
   text-align: center;
-  opacity: 1;
+  opacity: 0;
+  -webkit-transition: ease-in-out opacity 0.5s;
   transition: ease-in-out opacity 0.5s;
 }
 
@@ -38,12 +86,14 @@ body {
   height: 40px;
   line-height: 40px;
   font-size: 24px;
+  padding-right: 20px;
   color: #000;
   /* background-color: rgb(244, 0, 85); */
+  background: -webkit-gradient(linear, left top, right top, from(#fff700), to(#ddff00));
   background: linear-gradient(to right, #fff700, #ddff00);
 }
 
-.arrow-left {
+#overlay .arrow-left {
   position: absolute;
   top: 0px;
   left: -30px;
@@ -62,7 +112,7 @@ body {
   line-height: 40px;
   padding: 0 10px;
   background-color: #fff;
-  color: #666;
+  color: #000;
   text-align: left;
 }
 
@@ -73,19 +123,19 @@ body {
 svg path {
   stroke: #fff;
   stroke-width: 3px;
-  opacity: 0.5;
+  opacity: 0.3;
   cursor: pointer;
+  -webkit-transition: ease-in-out opacity 0.3s;
   transition: ease-in-out opacity 0.3s;
 }
 
 svg path.hidden {
   stroke-width: 20px;
-  opacity: 0.1;
-  stroke: yellowgreen;
+  opacity: 0;
+  stroke: #fff700;
 }
 
-svg path.active,
-svg path.hover {
+svg path.active, svg path.hover {
   opacity: 1;
 }
 
@@ -134,3 +184,4 @@ ellipse {
   clear: both;
   display: table;
 }
+/*# sourceMappingURL=styles.css.map */
