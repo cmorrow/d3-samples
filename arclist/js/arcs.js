@@ -1,6 +1,16 @@
 // det data
 getJson(createVis, "data/top50.json");
 
+d3.select("#views").selectAll("a").on("click", viewChange);
+
+function viewChange() {
+  d3.event.preventDefault;
+  console.log("view change");
+  console.log(this.getAttribute("rel"));
+  if (this.getAttribute("rel") == "list") {
+  }
+}
+
 function createVis(json) {
   const el = d3.select("#vis").on("mousemove", positionOverlay);
   const visEl = document.getElementById("vis");
@@ -8,6 +18,7 @@ function createVis(json) {
   const svgWidth = visEl.clientWidth;
 
   const yScale = d3.scaleLinear();
+  const xScale = d3.scaleLinear();
   const margin = 50,
     x0 = margin,
     y0 = svgHeight,
@@ -48,10 +59,6 @@ function createVis(json) {
     return num;
   });
 
-  console.log(`minSale: ${minSale}`);
-  console.log(`maxSale: ${maxSale}`);
-  console.log(`svgHeight: ${svgHeight}`);
-
   // init lines straight on bottom
   const overlay = el.select("#overlay");
   const visPaths = svg
@@ -84,9 +91,42 @@ function createVis(json) {
     // do stuff
   }
 
-  function pathClick(d, index) {
+  function pathClick() {
+    showListView();
+  }
+
+  function showListView() {
     visPaths.transition().duration(downTime).attr("d", pathOut);
     mousePaths.transition().duration(downTime).attr("d", pathOut);
+    const listView = d3.select("#listView").classed("visible", true);
+    buildList(data);
+  }
+
+  function buildList(data) {
+    xScale.domain([minSale, maxSale]).range([0, 100]);
+    const list = d3.select("#listView .items").selectAll("div.item").data(data);
+    const item = list.enter().append("div").classed("item", true);
+
+    //   list.node().classList.add('item row')
+
+    // const items = list.selectAll("div.item");
+
+    const row = item.append("div").classed("row", true);
+
+    row
+      .append("div")
+      .classed("col title", true)
+      .html((d) => d.item_description);
+
+    row
+      .append("div")
+      .classed("col sales", true)
+      .html((d) => numToCurrency.format(d.sales_total));
+
+    item
+      .append("div")
+      .classed("bar row", true)
+      .style("width", (d) => `${xScale(d.sales_total)}%`);
   }
 
   function positionOverlay(d, i) {
@@ -116,7 +156,6 @@ function createVis(json) {
   }
 
   function pathMouseOut(d, index) {
-    console.log("mouse out");
     visPaths.classed("hover", false);
     overlay.classed("active", false);
   }

@@ -17,15 +17,13 @@
       <div class="title">Top 50: Iowa Liquor Sales</div>
       <ul id="views">
         <li>
-          <a href="#" class="graph active"
-            ><span class="fa fa-list"></span> Graph View</a
+          <a href="#" rel="arcs" class="active"
+            ><span class="fa fa-list"></span> Arc View</a
           >
         </li>
-        <!-- <li>
-          <a href="#" class="list"
-            ><span class="fa fa-list"></span> List View</a
-          >
-        </li> -->
+        <li>
+          <a href="#" rel="list"><span class="fa fa-list"></span> List View</a>
+        </li>
       </ul>
     </div>
 
@@ -35,6 +33,14 @@
         <div class="number">0</div>
         <div class="title">Morrow</div>
       </div>
+    </div>
+
+    <div id="listView">
+      <div class="header row">
+        <div class="name col">Liquor</div>
+        <div class="sales col">Sales</div>
+      </div>
+      <div class="items"></div>
     </div>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="js/arcs.js"></script>
