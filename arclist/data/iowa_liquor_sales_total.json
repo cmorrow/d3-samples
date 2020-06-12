@@ -1,0 +1,402 @@
+[
+  {
+    "item_description": "Black Velvet",
+    "sales_total": "1.0304102906002022E8"
+  },
+  {
+    "item_description": "Captain Morgan Spiced Rum",
+    "sales_total": "7.345808492999265E7"
+  },
+  {
+    "item_description": "Jack Daniels Old #7 Black Lbl",
+    "sales_total": "6.726271465000728E7"
+  },
+  {
+    "item_description": "Titos Handmade Vodka",
+    "sales_total": "6.1135304679992065E7"
+  },
+  {
+    "item_description": "Fireball Cinnamon Whiskey",
+    "sales_total": "5.486120711000054E7"
+  },
+  {
+    "item_description": "Hawkeye Vodka",
+    "sales_total": "4.7984855410017975E7"
+  },
+  {
+    "item_description": "Crown Royal Canadian Whisky",
+    "sales_total": "4.532360761999866E7"
+  },
+  {
+    "item_description": "Crown Royal",
+    "sales_total": "4.068264659000139E7"
+  },
+  {
+    "item_description": "Absolut Swedish Vodka 80 Prf",
+    "sales_total": "3.570659688999756E7"
+  },
+  {
+    "item_description": "Jameson",
+    "sales_total": "3.5226759909999825E7"
+  },
+  {
+    "item_description": "Jagermeister Liqueur",
+    "sales_total": "3.41201716800044E7"
+  },
+  {
+    "item_description": "Jim Beam",
+    "sales_total": "3.1833334589999914E7"
+  },
+  {
+    "item_description": "Grey Goose Vodka",
+    "sales_total": "3.036856500999831E7"
+  },
+  {
+    "item_description": "Crown Royal Regal Apple",
+    "sales_total": "2.7632168370000675E7"
+  },
+  {
+    "item_description": "Hennessy VS",
+    "sales_total": "2.6147894929996982E7"
+  },
+  {
+    "item_description": "Captain Morgan Original Spiced",
+    "sales_total": "2.477481612000211E7"
+  },
+  {
+    "item_description": "Malibu Coconut Rum",
+    "sales_total": "2.4132328449995026E7"
+  },
+  {
+    "item_description": "Bacardi Superior Rum",
+    "sales_total": "2.2846729969999976E7"
+  },
+  {
+    "item_description": "Five O'clock Vodka",
+    "sales_total": "2.178962736000394E7"
+  },
+  {
+    "item_description": "Jose Cuervo Especial Reposado Tequila",
+    "sales_total": "2.175739063999933E7"
+  },
+  {
+    "item_description": "Admiral Nelson Spiced Rum",
+    "sales_total": "2.133689138999904E7"
+  },
+  {
+    "item_description": "Rumchata",
+    "sales_total": "2.0247153320000786E7"
+  },
+  {
+    "item_description": "Captain Morgan Spiced Barrel",
+    "sales_total": "1.9899181499999814E7"
+  },
+  {
+    "item_description": "Barton Vodka",
+    "sales_total": "1.972620960000203E7"
+  },
+  {
+    "item_description": "Seagrams 7 Crown Bl Whiskey",
+    "sales_total": "1.957308569999811E7"
+  },
+  {
+    "item_description": "Patron Tequila Silver",
+    "sales_total": "1.9394623419999998E7"
+  },
+  {
+    "item_description": "Southern Comfort",
+    "sales_total": "1.7892437010000676E7"
+  },
+  {
+    "item_description": "Tanqueray Gin",
+    "sales_total": "1.6847364349999536E7"
+  },
+  {
+    "item_description": "Smirnoff Vodka 80 Prf",
+    "sales_total": "1.5867557080000138E7"
+  },
+  {
+    "item_description": "Phillips Vodka",
+    "sales_total": "1.5722508979999376E7"
+  },
+  {
+    "item_description": "Dr. Mcgillicuddy's Cherry Schnapps",
+    "sales_total": "1.4795719789999083E7"
+  },
+  {
+    "item_description": "Maker's Mark",
+    "sales_total": "1.4790786429999573E7"
+  },
+  {
+    "item_description": "Jack Daniels Old #7 Black Label",
+    "sales_total": "1.404719535000017E7"
+  },
+  {
+    "item_description": "Hennessy Vs Cognac",
+    "sales_total": "1.3953492019999733E7"
+  },
+  {
+    "item_description": "Fireball Cinnamon Whiskey Mini Dispenser",
+    "sales_total": "1.3917190679998847E7"
+  },
+  {
+    "item_description": "Smirnoff 80prf",
+    "sales_total": "1.2800921870002244E7"
+  },
+  {
+    "item_description": "Rumple Minze Peppermint Schnapps Liqueur",
+    "sales_total": "1.2759004120000234E7"
+  },
+  {
+    "item_description": "Templeton Rye",
+    "sales_total": "1.2574380690000337E7"
+  },
+  {
+    "item_description": "Canadian Ltd Whisky",
+    "sales_total": "1.2511515280000592E7"
+  },
+  {
+    "item_description": "Mccormick Vodka Pet",
+    "sales_total": "1.2506105110001696E7"
+  },
+  {
+    "item_description": "Uv Blue (raspberry) Vodka",
+    "sales_total": "1.1621065129999394E7"
+  },
+  {
+    "item_description": "Paramount White Rum",
+    "sales_total": "1.1484524010000616E7"
+  },
+  {
+    "item_description": "Svedka Vodka",
+    "sales_total": "1.0959741830000622E7"
+  },
+  {
+    "item_description": "Juarez Tequila Gold",
+    "sales_total": "1.0956857150000118E7"
+  },
+  {
+    "item_description": "Canadian Club Whisky",
+    "sales_total": "1.0527489770000052E7"
+  },
+  {
+    "item_description": "Ketel One Imported Vodka",
+    "sales_total": "1.0525642189999908E7"
+  },
+  {
+    "item_description": "Five Star",
+    "sales_total": "1.0428999509999653E7"
+  },
+  {
+    "item_description": "Kessler Blend Whiskey",
+    "sales_total": "1.0329940169999965E7"
+  },
+  {
+    "item_description": "Bailey's Original Irish Cream",
+    "sales_total": "1.0236183580000084E7"
+  },
+  {
+    "item_description": "Black Velvet Toasted Caramel",
+    "sales_total": "9932913.750000909"
+  },
+  {
+    "item_description": "Kahlua Coffee Liqueur",
+    "sales_total": "9906263.449999448"
+  },
+  {
+    "item_description": "New Amsterdam Vodka",
+    "sales_total": "9104612.24000008"
+  },
+  {
+    "item_description": "Baileys Original Irish Cream",
+    "sales_total": "8788747.369999958"
+  },
+  {
+    "item_description": "Bacardi Limon",
+    "sales_total": "8768862.650000338"
+  },
+  {
+    "item_description": "Seagrams Extra Dry Gin",
+    "sales_total": "8672988.679999568"
+  },
+  {
+    "item_description": "Jose Cuervo Authentic Lime Margarita",
+    "sales_total": "8571193.310000736"
+  },
+  {
+    "item_description": "Absolut Swedish Vodka 80prf",
+    "sales_total": "8237889.829999804"
+  },
+  {
+    "item_description": "Fireball Cinnamon Whiskey PET",
+    "sales_total": "8230941.680000243"
+  },
+  {
+    "item_description": "Ten High",
+    "sales_total": "7747095.320000223"
+  },
+  {
+    "item_description": "Fireball Cinnamon Whisky",
+    "sales_total": "7483775.74000001"
+  },
+  {
+    "item_description": "Jack Daniel's Tennessee Honey",
+    "sales_total": "7403564.509999801"
+  },
+  {
+    "item_description": "Kinky Liqueur",
+    "sales_total": "7383900.0"
+  },
+  {
+    "item_description": "Bombay Sapphire Gin",
+    "sales_total": "7373142.870000013"
+  },
+  {
+    "item_description": "Captain Morgan Original Spiced Rum Pet",
+    "sales_total": "7334037.289999832"
+  },
+  {
+    "item_description": "Pinnacle Vodka",
+    "sales_total": "7290433.529999957"
+  },
+  {
+    "item_description": "Nikolai Vodka",
+    "sales_total": "7139520.640000599"
+  },
+  {
+    "item_description": "Absolut Citron (lemon Vodka)",
+    "sales_total": "7017130.609999779"
+  },
+  {
+    "item_description": "Smirnoff Vodka 80 Prf Pet",
+    "sales_total": "6926630.510000055"
+  },
+  {
+    "item_description": "Dewars White Label Scotch",
+    "sales_total": "6671688.370000001"
+  },
+  {
+    "item_description": "Paul Masson Grande Amber Brandy",
+    "sales_total": "6612449.200000029"
+  },
+  {
+    "item_description": "Patron Silver",
+    "sales_total": "6434110.5"
+  },
+  {
+    "item_description": "UV Vodka PET",
+    "sales_total": "6432241.249999745"
+  },
+  {
+    "item_description": "Jose Cuervo Especial Silver",
+    "sales_total": "6381796.719999902"
+  },
+  {
+    "item_description": "Cedar Ridge Bourbon",
+    "sales_total": "6371635.8000001535"
+  },
+  {
+    "item_description": "Skol Vodka",
+    "sales_total": "6348002.530000209"
+  },
+  {
+    "item_description": "Sailor Jerry Spiced Navy Rum",
+    "sales_total": "6066016.77000015"
+  },
+  {
+    "item_description": "Remy Martin VSOP",
+    "sales_total": "6046925.549999966"
+  },
+  {
+    "item_description": "Mccormick Vodka",
+    "sales_total": "5813375.480000156"
+  },
+  {
+    "item_description": "Windsor Canadian Pet",
+    "sales_total": "5762123.35000011"
+  },
+  {
+    "item_description": "Black Velvet Traveler",
+    "sales_total": "5660766.67000022"
+  },
+  {
+    "item_description": "Wild Turkey 101",
+    "sales_total": "5545019.109999983"
+  },
+  {
+    "item_description": "Jose Cuervo Especial Reposado",
+    "sales_total": "5397052.929999994"
+  },
+  {
+    "item_description": "Templeton 4YR Rye",
+    "sales_total": "5125921.6300002765"
+  },
+  {
+    "item_description": "Smirnoff PET 80prf",
+    "sales_total": "4956298.640000229"
+  },
+  {
+    "item_description": "Fireball Cinnamon",
+    "sales_total": "4893227.519999878"
+  },
+  {
+    "item_description": "Titos Vodka",
+    "sales_total": "4866448.440000138"
+  },
+  {
+    "item_description": "Grey Goose",
+    "sales_total": "4831168.42999996"
+  },
+  {
+    "item_description": "Seagrams 7 Crown",
+    "sales_total": "4807919.640000165"
+  },
+  {
+    "item_description": "Bacardi Superior",
+    "sales_total": "4784445.570000001"
+  },
+  {
+    "item_description": "Southern Comfort PET",
+    "sales_total": "4727551.020000223"
+  },
+  {
+    "item_description": "Johnnie Walker Black",
+    "sales_total": "4692291.919999947"
+  },
+  {
+    "item_description": "Paramount Peppermint Schnapps",
+    "sales_total": "4644763.219999903"
+  },
+  {
+    "item_description": "Everclear Alcohol",
+    "sales_total": "4638311.3400000455"
+  },
+  {
+    "item_description": "New Amsterdam Peach",
+    "sales_total": "4606055.8800000185"
+  },
+  {
+    "item_description": "Montezuma Gold Tequila",
+    "sales_total": "4535732.339999959"
+  },
+  {
+    "item_description": "Grand Marnier Cordon Rouge",
+    "sales_total": "4531932.429999996"
+  },
+  {
+    "item_description": "Johnnie Walker Red",
+    "sales_total": "4441762.630000031"
+  },
+  {
+    "item_description": "Christian Bros Brandy",
+    "sales_total": "4424453.200000085"
+  },
+  {
+    "item_description": "Paramount Blackberry Brandy",
+    "sales_total": "4414509.370000001"
+  },
+  {
+    "item_description": "Bulleit Bourbon",
+    "sales_total": "4388197.13"
+  }
+]

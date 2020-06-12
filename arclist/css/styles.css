@@ -1,25 +1,108 @@
-#vis {
-  width: 800px;
-  max-width: 100%;
-  height: 400px;
+body {
   background-color: #333;
+}
+#vis {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  background-color: #333;
+  margin: 0 auto;
+}
+
+.svg-container {
+  display: inline-block;
+  position: relative;
+  /* padding-bottom: 100%; */
+  vertical-align: top;
+  /* overflow: hidden; */
+}
+
+#overlay {
+  position: absolute;
+  z-index: 1;
+  left: 430px;
+  top: 20px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  /* overflow: hidden; */
+  text-align: center;
+  opacity: 1;
+  transition: ease-in-out opacity 0.5s;
+}
+
+#overlay .number {
+  float: left;
+  /* width: 60px; */
+  height: 40px;
+  line-height: 40px;
+  font-size: 24px;
+  color: #000;
+  /* background-color: rgb(244, 0, 85); */
+  background: linear-gradient(to right, #fff700, #ddff00);
+}
+
+.arrow-left {
+  position: absolute;
+  top: 0px;
+  left: -30px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 30px solid #fff700;
+}
+
+#overlay .title {
+  float: left;
+  height: 40px;
+  /* width: 180px; */
+  border-radius: 0 3px 3px 0;
+  line-height: 40px;
+  padding: 0 10px;
+  background-color: #fff;
+  color: #666;
+  text-align: left;
+}
+
+#overlay.active {
+  opacity: 1;
 }
 
 svg path {
-  stroke: red;
+  stroke: #fff;
   stroke-width: 3px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: ease-in-out opacity 0.3s;
+}
+
+svg path.hidden {
+  stroke-width: 20px;
+  opacity: 0.1;
+  stroke: yellowgreen;
+}
+
+svg path.active,
+svg path.hover {
+  opacity: 1;
+}
+
+svg path.muted {
+  opacity: 0.2;
 }
 
 .stop-left {
-  stop-color: #3f51b5; /* Indigo */
+  stop-color: #00fa3e;
 }
 
 .stop-middle {
-  stop-color: #3fadb5; /* Indigo */
+  stop-color: #fff700;
 }
 
 .stop-right {
-  stop-color: #3f51b5; /* Teal */
+  stop-color: #00fa3e;
 }
 
 .gradient-filled {
@@ -39,17 +122,15 @@ ellipse {
   stroke-width: 5;
 }
 
-.svg-container {
-  display: inline-block;
-  position: relative;
-  height: 400px;
-  /* padding-bottom: 100%; */
-  vertical-align: top;
-  /* overflow: hidden; */
-}
 .svg-content {
   display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.cf::after {
+  content: "";
+  clear: both;
+  display: table;
 }
