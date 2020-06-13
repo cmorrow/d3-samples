@@ -49,7 +49,9 @@ function init(json) {
   // build arc vis
   buildArcs();
 
-  window.onresize = updateArcs;
+  window.onresize = function () {
+    buildArcs(true);
+  };
 }
 
 function viewChange() {
@@ -89,6 +91,9 @@ async function showArcView() {
 }
 
 async function showListView() {
+  const viewLinks = d3.select("#views");
+  viewLinks.select(".arcs").classed("active", false);
+  viewLinks.select(".list").classed("active", true);
   svg.transition().duration(1000).style("opacity", 0);
   mousePaths.transition().duration(downTime).attr("d", pathOut);
   await visPaths.transition().duration(downTime).attr("d", pathOut).end();
@@ -96,7 +101,10 @@ async function showListView() {
   buildList(data);
 }
 
-function buildArcs() {
+function buildArcs(reset) {
+  if (reset) {
+    d3.select("svg").remove();
+  }
   listView.classed("none", true);
   overlay.classed("none", false);
 
@@ -145,6 +153,15 @@ async function updateArcs() {
     (y = svgHeight),
     (xCenter = svgWidth / 2),
     (topY = -(svgHeight - margin));
+  // set scales
+  minSale = d3.min(data, (d) => {
+    const num = Number(d.sales_total);
+    return num;
+  });
+  maxSale = d3.max(data, (d) => {
+    const num = Number(d.sales_total);
+    return num;
+  });
 
   svg.attr("viewBox", `0 0 ${svgWidth} ${svgHeight}`);
 
