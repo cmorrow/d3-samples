@@ -16,7 +16,7 @@ body {
   position: fixed;
   z-index: 2;
   top: 0;
-  width: 310px;
+  width: 25%;
   border-radius: 0 0 10px 0;
   background-color: #000;
   color: #fff;
@@ -209,10 +209,12 @@ ellipse {
 }
 
 #listView {
+  float: right;
   position: relative;
   min-height: 500px;
-  width: 50%;
+  width: 70%;
   padding-top: $pad;
+  padding-right: $pad;
   margin: 0 auto;
 
   .header {

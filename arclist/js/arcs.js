@@ -1,7 +1,7 @@
 const visEl = document.getElementById("vis");
 let svgHeight = visEl.clientHeight;
 let svgWidth = visEl.clientWidth;
-let data, minSale, maxSale;
+let data, minSale, maxSale, currentView;
 
 // arc selections
 let svg, visPaths, mousePaths;
@@ -50,7 +50,9 @@ function init(json) {
   buildArcs();
 
   window.onresize = function () {
-    buildArcs(true);
+    if (currentView === "arcs") {
+      buildArcs(true);
+    }
   };
 }
 
@@ -59,8 +61,10 @@ function viewChange() {
   viewLinks.classed("active", false);
   this.classList.toggle("active");
   if (this.getAttribute("rel") == "list") {
+    currentView = "list";
     showListView();
   } else {
+    currentView = "arcs";
     showArcView();
   }
 }
@@ -273,9 +277,8 @@ function pathMouseOut(d, index) {
   overlay.classed("active", false);
 }
 
+// create line; bellCurve
 function createLine(d) {
-  //   const x1 = 200;
-  const y1 = 400;
   const points = [
     [x0, y0],
     [xCenter, svgWidth],
@@ -283,6 +286,11 @@ function createLine(d) {
   ];
   const path = d3.path();
   path.moveTo(x0, y0);
+  var quart = svgWidth / 4;
+
+  // return `M0 ${svgHeight} C ${quart} ${svgHeight}, ${quart} 0, ${
+  //   quart * 2
+  // } 0, ${quart * 3} 0, ${quart * 3} ${svgHeight}, ${quart * 4} ${svgHeight}`;
   path.quadraticCurveTo(...points[1], ...points[2]);
   return path;
 }
