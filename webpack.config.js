@@ -14,6 +14,7 @@ const config = {
     path: buildPath,
     filename: "[name].[contenthash].js",
   },
+  devtool: "cheap-module-eval-source-map",
   module: {
     rules: [
       {

@@ -71,6 +71,10 @@ body {
         background-color: $green;
       }
     }
+
+    &.disabled {
+      cursor: arrow;
+    }
   }
 }
 #vis {
