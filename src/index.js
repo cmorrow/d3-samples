@@ -1,3 +1,7 @@
+import "./styles/styles.scss";
+
+import * as paths from "./js/paths";
+
 const visEl = document.getElementById("vis");
 let svgHeight = visEl.clientHeight;
 let svgWidth = visEl.clientWidth;
@@ -17,6 +21,12 @@ const margin = 50,
   overlayXOffset = 35,
   overlayYOffset = 20;
 
+const numToCurrency = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 2,
+});
+
 // updated dimensions
 let y0 = svgHeight,
   x1 = svgWidth - margin * 2,
@@ -25,9 +35,7 @@ let y0 = svgHeight,
   topY = -(svgHeight - margin);
 
 const el = d3.select("#vis").on("mousemove", positionOverlay);
-
 const overlay = el.select("#overlay");
-
 const yScale = d3.scaleLinear();
 const xScale = d3.scaleLinear();
 
@@ -126,6 +134,20 @@ function buildArcs(reset) {
   gradient.append("stop").attr("class", "stop-right").attr("offset", "100%");
 
   // init lines straight on bottom
+  const options = {
+    x0,
+    x1,
+    y0,
+    xCenter,
+    svgWidth,
+    svgHeight,
+  };
+
+  const points = [
+    [x0, y0],
+    [xCenter, svgWidth],
+    [x1, svgHeight],
+  ];
 
   visPaths = svg
     .selectAll("path")
@@ -134,7 +156,7 @@ function buildArcs(reset) {
     .append("path")
     .classed("visible", true)
     .classed("gradient-stroke", true)
-    .attr("d", createLine);
+    .attr("d", paths.createQuad(options));
 
   mousePaths = svg
     .selectAll("path.hidden")
@@ -145,7 +167,7 @@ function buildArcs(reset) {
     .on("mouseout", pathMouseOut)
     .on("click", pathClick)
     .classed("hidden", true)
-    .attr("d", createLine);
+    .attr("d", paths.createQuad(options));
 
   updateArcs();
 }
@@ -277,24 +299,6 @@ function pathMouseOut(d, index) {
   overlay.classed("active", false);
 }
 
-// create line; bellCurve
-function createLine(d) {
-  const points = [
-    [x0, y0],
-    [xCenter, svgWidth],
-    [x1, svgHeight],
-  ];
-  const path = d3.path();
-  path.moveTo(x0, y0);
-  var quart = svgWidth / 4;
-
-  // return `M0 ${svgHeight} C ${quart} ${svgHeight}, ${quart} 0, ${
-  //   quart * 2
-  // } 0, ${quart * 3} 0, ${quart * 3} ${svgHeight}, ${quart * 4} ${svgHeight}`;
-  path.quadraticCurveTo(...points[1], ...points[2]);
-  return path;
-}
-
 function pathIn(d) {
   const points = [
     [x0, y0],
@@ -348,12 +352,6 @@ function transformData(data) {
   return newData;
 }
 
-const numToCurrency = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
-  minimumFractionDigits: 2,
-});
-
 function getJson(callback, dataUrl) {
   var xobj = new XMLHttpRequest();
   xobj.overrideMimeType("application/json");
@@ -366,24 +364,3 @@ function getJson(callback, dataUrl) {
   };
   xobj.send(null);
 }
-
-// function pathClick(d, index) {
-//   visPaths.each(function (d, i) {
-//     if (i === index) {
-//       d3.select(this).classed("active", true);
-//       d3.select(this).classed("muted", false);
-//     } else {
-//       d3.select(this)
-//         .classed("muted", true)
-//         .transition()
-//         .duration(downTime)
-//         .attr("d", pathDown);
-//     }
-//   });
-//   //   d3.select(this).classed("active", true);
-//   mousePaths.each(function (d, i) {
-//     if (i !== index) {
-//       d3.select(this).transition().duration(downTime).attr("d", pathDown);
-//     }
-//   });
-// }

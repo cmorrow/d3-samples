@@ -1,10 +1,4 @@
-$overlayHeight: 40px;
-$pad: 20px;
-$round: 5px;
-$transition: ease-in-out opacity 1s;
-
-$green: #ddff00;
-$yellow: #fff700;
+@import "settings";
 
 body {
   margin: 0;
