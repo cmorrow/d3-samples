@@ -1,10 +1,10 @@
 # D3 Quad Arcs - ES6
 
 ## Setup
-`npm i`
+```npm i```
 
 ## Running local
-`npm start`
+```npm start```
 
 ## Building for production
-`npm run build`
+```npm run build```
