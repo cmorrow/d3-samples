@@ -1,4 +1,5 @@
-function getJson(callback, dataUrl) {
+// data fucntions
+export function getJson(callback, dataUrl) {
   var xobj = new XMLHttpRequest();
   xobj.overrideMimeType("application/json");
   xobj.open("GET", dataUrl, true); // Replace 'my_data' with the path to your file
@@ -14,7 +15,7 @@ function getJson(callback, dataUrl) {
   xobj.send(null);
 }
 
-function transformData(data) {
+export function transformData(data) {
   const newData = data.map((obj) => {
     return {
       item_description: obj.item_description,
@@ -24,4 +25,10 @@ function transformData(data) {
   return newData;
 }
 
-export { getJson, transformData };
+// end data functions
+
+export const numToCurrency = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 2,
+});
