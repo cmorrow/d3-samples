@@ -1,5 +1,5 @@
 {
-  "name": "d3-samples",
+  "name": "d3-arcs-es6",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cmorrow/d3-samples.git"
+    "url": "git+https://github.com/cmorrow/d3-arcs-es6.git"
   },
   "author": "Chris Morrow",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cmorrow/d3-samples/issues"
+    "url": "https://github.com/cmorrow/d3-arcs-es6/issues"
   },
-  "homepage": "https://github.com/cmorrow/d3-samples#readme",
+  "homepage": "https://github.com/cmorrow/d3-arcs-es6#readme",
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/plugin-transform-runtime": "^7.10.5",
