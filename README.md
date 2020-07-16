@@ -1,10 +1,11 @@
 # D3 Quad Arcs - ES6
 
 ## Setup
-```npm i```
+`npm i`
 
 ## Running local
-```npm start```
+1. `npm start`
+2. open browser: [http://localhost:3000](http://localhost:3000)
 
 ## Building for production
-```npm run build```
+`npm run build`
