@@ -5,7 +5,7 @@
 
 ## Running local
 1. `npm start`
-2. open browser: [http://localhost:3000](http://localhost:3000)
+2. open browser: <a href="http://localhost:9000" target="_blank">http://localhost:9000</a>
 
 ## Building for production
 `npm run build`
